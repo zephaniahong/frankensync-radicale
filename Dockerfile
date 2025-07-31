@@ -9,4 +9,4 @@ RUN chmod 644 /etc/radicale/config /data/users
 
 EXPOSE 3000
 
-CMD ["/venv/bin/python", "-m", "radicale", "--server-hosts", "0.0.0.0:$PORT"]
+CMD ["sh", "-c", "/venv/bin/python -m radicale --server-hosts 0.0.0.0:$PORT"]
