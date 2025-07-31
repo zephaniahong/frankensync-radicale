@@ -26,7 +26,7 @@ services:
     pids_limit: 50
     mem_limit: 256M
     healthcheck:
-      test: [ "CMD", "curl", "--fail", "http://localhost:5232", "||", "exit", "1" ]
+      test: [ "CMD", "/venv/bin/python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:5232/.well-known/caldav')" ]
       interval: 30s
       timeout: 10s
       retries: 3

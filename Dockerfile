@@ -10,5 +10,5 @@ RUN chmod 644 /etc/radicale/config /data/users
 # Expose port
 EXPOSE 5232
 
-# Start Radicale
-CMD ["python", "-m", "radicale"] 
+# Start Radicale using the virtual environment Python
+CMD ["/venv/bin/python", "-m", "radicale"] 
