@@ -2,7 +2,7 @@
 hosts = [::]:5232
 
 [auth]
-type = htpasswd
+type = none
 htpasswd_filename = /data/users
 htpasswd_encryption = bcrypt
 
