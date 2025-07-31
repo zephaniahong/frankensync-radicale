@@ -7,8 +7,6 @@ COPY users /data/users
 # Set proper permissions
 RUN chmod 644 /etc/radicale/config /data/users
 
-# Expose port
-EXPOSE 5232
+EXPOSE 3000
 
-# Start Radicale using the virtual environment Python
-CMD ["/venv/bin/python", "-m", "radicale"] 
+CMD ["/venv/bin/python", "-m", "radicale", "--server-hosts", "0.0.0.0:${PORT}"]
