@@ -1,4 +1,4 @@
-FROM tomquest/radicale:latest
+FROM tomsquest/docker-radicale:latest
 
 # Copy configuration files
 COPY config /etc/radicale/config

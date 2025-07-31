@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   radicale:
-    image: tomquest/radicale:latest
+    image: tomsquest/docker-radicale:latest
     ports:
       - "5232:5232"
     volumes:

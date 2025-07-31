@@ -1,6 +1,6 @@
 # Radicale Docker for Railway
 
-This is a custom Radicale setup using the `tomquest/radicale` Docker image, configured for deployment on Railway with IPv6 support.
+This is a custom Radicale setup using the `tomsquest/docker-radicale` Docker image, configured for deployment on Railway with IPv6 support.
 
 ## IPv6 Configuration
 
@@ -65,7 +65,7 @@ The service will be available at:
 
 The deployment uses the following configuration:
 
-- **Image**: `tomquest/radicale:latest`
+- **Image**: `tomsquest/docker-radicale:latest`
 - **Port**: 5232 (exposed automatically by Railway)
 - **IPv6**: Enabled with dual-stack support
 - **Config**: Mounted from `./config` to `/etc/radicale/config`
