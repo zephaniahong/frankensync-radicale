@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  radicale:
+    image: tomquest/radicale:latest
+    ports:
+      - "5232:5232"
+    volumes:
+      - ./config:/etc/radicale/config
+      - ./users:/etc/radicale/users
+      - ./data:/var/lib/radicale/collections
+    environment:
+      - RADICALE_CONFIG=/etc/radicale/config
+    restart: unless-stopped
+    networks:
+      - radicale_network
+    healthcheck:
+      test: [ "CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:5232/.well-known/caldav')" ]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+networks:
+  radicale_network:
+    driver: bridge
+    enable_ipv6: true

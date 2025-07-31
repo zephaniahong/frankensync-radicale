@@ -1,0 +1,25 @@
+[server]
+hosts = [::]:5232
+
+[auth]
+type = htpasswd
+htpasswd_filename = /data/users
+htpasswd_encryption = bcrypt
+
+[storage]
+filesystem_folder = /data/collections
+
+[logging]
+level = info
+
+[rights]
+type = owner_only
+
+[web]
+type = internal
+
+# Allow user creation and access without passwords
+[user]
+type = htpasswd
+htpasswd_filename = /data/users
+htpasswd_encryption = bcrypt 
