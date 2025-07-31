@@ -6,8 +6,6 @@
     },
     "deploy": {
         "startCommand": "/venv/bin/python -m radicale",
-        "healthcheckPath": "/.well-known/caldav",
-        "healthcheckTimeout": 300,
         "restartPolicyType": "ON_FAILURE",
         "restartPolicyMaxRetries": 10
     }
