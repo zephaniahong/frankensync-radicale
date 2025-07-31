@@ -16,10 +16,4 @@ level = info
 type = owner_only
 
 [web]
-type = internal
-
-# Allow user creation and access without passwords
-[user]
-type = htpasswd
-htpasswd_filename = /data/users
-htpasswd_encryption = bcrypt 
+type = internal 
