@@ -16,4 +16,4 @@ level = info
 type = owner_only
 
 [web]
-type = internal 
+type = radicale.web.wsgi
