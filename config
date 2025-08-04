@@ -1,9 +1,5 @@
 [server]
-hosts = 0.0.0.0:${PORT}
-reverse_proxy = True
-
-[rights]
-type = radicale.rights.allow_all
+hosts = [::]:5232
 
 [auth]
 type = none
@@ -15,6 +11,9 @@ filesystem_folder = /data/collections
 
 [logging]
 level = info
+
+[rights]
+type = owner_only
 
 [web]
 type = internal 
