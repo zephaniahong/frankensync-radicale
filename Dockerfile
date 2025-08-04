@@ -12,5 +12,4 @@ RUN chmod 644 /etc/radicale/config /data/users
 
 EXPOSE 3000
 
-CMD ["/venv/bin/python", "-m", "radicale", "--config", "/etc/radicale/config"]
-
+CMD ["sh", "-c", "/venv/bin/python -m radicale --config /etc/radicale/config --host 0.0.0.0 --port ${PORT:-3000}"]

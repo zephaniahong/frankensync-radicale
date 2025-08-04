@@ -1,6 +1,3 @@
-[server]
-hosts = [::]:3000
-
 [auth]
 type = none
 htpasswd_filename = /data/users
