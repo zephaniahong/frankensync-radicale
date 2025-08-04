@@ -1,5 +1,8 @@
 FROM tomsquest/docker-radicale:latest
 
+# Install gettext to provide envsubst
+RUN apk add --no-cache gettext
+
 # Copy custom configuration files
 COPY config /etc/radicale/config
 COPY users /data/users
