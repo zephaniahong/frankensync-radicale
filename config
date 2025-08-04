@@ -1,3 +1,6 @@
+[server]
+hosts = 0.0.0.0:${PORT}
+
 [auth]
 type = none
 htpasswd_filename = /data/users
