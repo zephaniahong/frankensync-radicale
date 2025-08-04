@@ -12,4 +12,5 @@ RUN chmod 644 /etc/radicale/config /data/users
 
 EXPOSE 3000
 
-CMD ["sh", "-c", "envsubst < /etc/radicale/config > /tmp/config && /venv/bin/python -m radicale --config /tmp/config"]
+CMD ["/venv/bin/python", "-m", "radicale", "--config", "/etc/radicale/config"]
+

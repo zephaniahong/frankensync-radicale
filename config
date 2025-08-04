@@ -1,5 +1,5 @@
 [server]
-hosts = [::]:5232
+hosts = [::]:3000
 
 [auth]
 type = none
